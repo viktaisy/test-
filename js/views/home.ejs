@@ -1,0 +1,16 @@
+<%- include('particles/header.ejs') %>
+
+<%- include('particles/navigation.ejs') %>
+
+<% for (let i = 0; i < items.length; i++) { %>
+
+    <div  class="section">
+        <a class="section__link" style="color:black;" href="/items/<%= items[i].id %>">
+            <h2 class="section__title" style="color:black ;"><%= items[i].title %></h2>
+            <img class="section__image" src="img/<%= items[i].image %>">
+            <h2 class="section__description" style="color:black ;"><%= items[i].description %></h2>
+        </a>
+
+<% } %>
+
+<%- include('particles/footer.ejs') %>
